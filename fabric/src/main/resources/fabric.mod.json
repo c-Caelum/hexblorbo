@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "caelum.hexblorbo.fabric.ExampleModFabric"
+      "caelum.hexblorbo.fabric.HexblorboFabric"
     ],
     "client": [
-      "caelum.hexblorbo.fabric.client.ExampleModFabricClient"
+      "caelum.hexblorbo.fabric.client.HexblorboFabricClient"
     ]
   },
   "mixins": [
