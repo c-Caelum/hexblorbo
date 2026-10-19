@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/hexblorbo.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.test.iml" />
+    </modules>
+  </component>
+</project>

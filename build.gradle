@@ -2,6 +2,7 @@ plugins {
     id 'dev.architectury.loom' version '1.17-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.5-SNAPSHOT'
     id 'com.gradleup.shadow' version '9.4.3' apply false
+    id 'at.petra-k.pkpcpbp.PKJson5Plugin' version "${pkpcpbp_ver}"
 }
 
 architectury {
@@ -24,11 +25,68 @@ subprojects {
     }
 
     repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+        // Add here additional repositories if required by some of the dependencies below.
+        maven {
+            name = "BlameJared Maven"
+            url = "https://maven.blamejared.com"
+        }
+        maven { url = "https://maven.hexxy.media" }
+        maven { url "https://maven.gnomecraft.net/releases" }
+        exclusiveContent {
+            forRepository {
+                maven { url = "https://api.modrinth.com/maven" }
+            }
+            filter { includeGroup "maven.modrinth" }
+        }
+        exclusiveContent {
+            forRepository {
+                flatDir {
+                    dirs "../libs"
+                }
+            }
+            filter {
+                includeGroup "libs"
+            }
+        }
+        maven {
+            name = "Wispforest Maven"
+            url = "https://maven.wispforest.io/releases"
+        }
+        maven {
+            name = "ParchmentMC Maven"
+            url = "https://maven.parchmentmc.org"
+        }
+        maven { url "https://maven.shedaniel.me/" }
+        maven { url 'https://maven.su5ed.dev/releases' }
+
+        maven {
+            name = "Terraformers"
+            url = "https://maven.terraformersmc.com/"
+        }
+
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
+        }
+
+        maven {
+            name = 'Kotlin for Forge'
+            url = 'https://thedarkcolour.github.io/KotlinForForge/'
+        }
+
+        maven {
+            url = "https://pool.net.eu.org/"
+        }
+
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+        maven { url = "https://mvn.devos.one/snapshots" } // Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+
+        maven { url = "https://maven.theillusivec4.top/" } // Curios API
+
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
+
+        mavenCentral()
     }
 
     loom {

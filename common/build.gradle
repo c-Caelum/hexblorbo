@@ -8,6 +8,12 @@ dependencies {
     // Do NOT use other classes from Fabric Loader.
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
+    implementation("libs:hexcasting-neoforge:$minecraft_version:$hexcasting_version")
+    implementation("libs:paucal:$paucal_version+$minecraft_version-common")
+    implementation("com.samsthenerd.inline:inline-neoforge:$minecraft_version-$inline_version") { transitive = false }
+    implementation("dev.architectury:architectury:$architectury_api_version") { transitive = false }
+    implementation("io.wispforest:accessories-common:$accessories_version+$minecraft_version") { transitive = false }
+
     // Architectury API. This is optional, and you can comment it out if you don't need it.
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 }
