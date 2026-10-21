@@ -1,0 +1,13 @@
+{
+  hexcasting: {
+    mishap: {
+      invalid_value: {
+        class: {
+          blorbo: "a blorbo iota",
+          blorbo_with_size: "a blorbo with size %d",
+          double_bitset_bounds: "an integer between %d and %d"
+        }
+      }
+    }
+  }
+}

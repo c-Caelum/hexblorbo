@@ -1,21 +1,16 @@
 package caelum.hexblorbo.hex;
 
-import at.petrak.hexcasting.api.casting.ActionRegistryEntry;
-import at.petrak.hexcasting.api.casting.castables.Action;
 import at.petrak.hexcasting.api.casting.iota.Iota;
 import at.petrak.hexcasting.api.casting.iota.IotaType;
-import at.petrak.hexcasting.api.casting.math.HexDir;
-import at.petrak.hexcasting.api.casting.math.HexPattern;
 import caelum.hexblorbo.Hexblorbo;
+import caelum.hexblorbo.hex.iotas.BlorboIota;
 import net.minecraft.resources.ResourceLocation;
-import static caelum.hexblorbo.Hexblorbo.modLoc;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-
-import caelum.hexblorbo.hex.iotas.*;
+import static caelum.hexblorbo.Hexblorbo.modLoc;
 
 public class HexblorboIotas {
     private static final HashMap<ResourceLocation, IotaType<?>> iotatypes = new HashMap<>();

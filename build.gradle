@@ -1,9 +1,19 @@
+buildscript {
+    ext.kotlin_version = '2.3.10'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 plugins {
     id 'dev.architectury.loom' version '1.17-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.5-SNAPSHOT'
     id 'com.gradleup.shadow' version '9.4.3' apply false
     id 'at.petra-k.pkpcpbp.PKJson5Plugin' version "${pkpcpbp_ver}"
 }
+apply plugin: 'kotlin'
 
 architectury {
     minecraft = project.minecraft_version
@@ -104,8 +114,6 @@ subprojects {
         // If you remove this line, sources will not be generated.
         withSourcesJar()
 
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
     }
 
     tasks.withType(JavaCompile).configureEach {
@@ -129,4 +137,13 @@ subprojects {
             // retrieving dependencies.
         }
     }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+kotlin {
+    jvmToolchain(8)
 }

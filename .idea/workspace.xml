@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d2ed10e-c24c-45ca-9dbf-986ef5c71cce" name="Changes" comment="renaming so it looks like I did all the work">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/api/utils/BinarySet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboArithmetics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboIotas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/actions/OpNewBlorbo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/BlorboArithmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/iotas/BlorboIota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/resources/hexblorbo.classtweaker" afterDir="false" />
+    <list default="true" id="5d2ed10e-c24c-45ca-9dbf-986ef5c71cce" name="Changes" comment="I almost forgot">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/OperatorBasicDefaults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/OperatorUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboAbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboAnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboIndexOf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboNot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboOr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboReplace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboRev.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboSlice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboXor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/resources/en_us.flatten.json5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.1/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.1/checksums/sha1-checksums.bin" afterDir="false" />
@@ -21,16 +26,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/9.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/hexblorbo.fabric.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/neoforge/hexblorbo.neoforge.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___fabric__fabric.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___neoforge__neoforge.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server___neoforge__neoforge.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/Hexblorbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/Hexblorbo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/caelum/hexblorbo/fabric/HexblorboFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/caelum/hexblorbo/fabric/HexblorboFabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neoforge/src/main/java/caelum/hexblorbo/neoforge/HexblorboNeoforge.java" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/java/caelum/hexblorbo/neoforge/HexblorboNeoforge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/api/utils/BinarySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/api/utils/BinarySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboArithmetics.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboArithmetics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboIotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/HexblorboIotas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/BlorboArithmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/BlorboArithmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/arithmetics/blorbo/BlorboIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/iotas/BlorboIota.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/hex/iotas/BlorboIota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neoforge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +66,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -83,25 +94,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:common:caelum.hexblorbo.api.utils.Test.main()].executor": "Run",
-    "Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:fabric:dev.architectury.transformer.TransformerRuntime.main()].executor": "Run",
-    "Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:neoforge:dev.architectury.transformer.TransformerRuntime.main()].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/shenanigans/mc/hexblorbo-1.21.1-fabric-neoforge-template",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:common:caelum.hexblorbo.api.utils.Test.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:fabric:dev.architectury.transformer.TransformerRuntime.main()].executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.hexblorbo-1.21.1-fabric-neoforge-template [:neoforge:dev.architectury.transformer.TransformerRuntime.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shenanigans/mc/hexblorbo-1.21.1-fabric-neoforge-template&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="caelum.hexblorbo.hex.arithmetics.blorbo" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Minecraft Client (:fabric)">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="caelum.hexblorbo.api.utils.Test" />
@@ -155,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792420550143</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I almost forgot">
+      <option name="closed" value="true" />
+      <created>1792524088254</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1792524088254</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +188,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added hex.&#10;I fucking hate gradle." />
     <MESSAGE value="renaming so it looks like I did all the work" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming so it looks like I did all the work" />
+    <MESSAGE value="I almost forgot" />
+    <option name="LAST_COMMIT_MESSAGE" value="I almost forgot" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/caelum/hexblorbo/api/utils/BinarySet.java</url>
+          <line>1485</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

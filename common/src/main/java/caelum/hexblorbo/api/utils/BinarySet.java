@@ -25,6 +25,11 @@
 
 package caelum.hexblorbo.api.utils;
 
+import caelum.hexblorbo.Hexblorbo;
+import caelum.hexblorbo.hex.iotas.BlorboIota;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -38,6 +43,7 @@ import java.util.Objects;
 import java.util.Spliterator;
 import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.StreamSupport;
 
 /**
@@ -88,6 +94,13 @@ public class BinarySet implements Cloneable, java.io.Serializable {
     public int getbitSize() {
         return bitSize;
     }
+
+    public static final Codec<BinarySet> CODEC = RecordCodecBuilder.<BinarySet>create(builder ->
+            builder.group(
+                Codec.LONG_STREAM.xmap(LongStream::toArray, LongStream::of).fieldOf("data").forGetter(BinarySet::getWords),
+                    Codec.INT.fieldOf("bitSize").forGetter(BinarySet::getbitSize)
+            ).apply(builder, BinarySet::new)
+    );
 
     /**
      * @serialField bits long[]
@@ -427,6 +440,9 @@ public class BinarySet implements Cloneable, java.io.Serializable {
 
         int startWordIndex = wordIndex(fromIndex);
         int endWordIndex   = wordIndex(toIndex - 1);
+        if (toIndex >= bitSize) {
+            throw new IndexOutOfBoundsException();
+        }
         expandTo(endWordIndex);
 
         long firstWordMask = WORD_MASK << fromIndex;
@@ -1245,7 +1261,6 @@ public class BinarySet implements Cloneable, java.io.Serializable {
         if (bitSize > limit-2) {
             needed = 6;
         }
-        System.out.println(Math.min(bitSize, limit-needed));
         StringBuilder builder = new StringBuilder(Math.min(bitSize, limit-needed)+needed);
         int local = bitSize&63;
         builder.append('{');
@@ -1257,7 +1272,6 @@ public class BinarySet implements Cloneable, java.io.Serializable {
             builder.append(" ...");
         }
         builder.append('}');
-        System.out.println(builder.length());
         return builder.toString();
     }
 
@@ -1460,7 +1474,6 @@ public class BinarySet implements Cloneable, java.io.Serializable {
         return words;
     }
 
-
     private long getLongBetween(int start, int end) {
         BinarySet notSorry = get(start, end);
         return notSorry.words[0];
@@ -1549,10 +1562,8 @@ public class BinarySet implements Cloneable, java.io.Serializable {
             return new BinarySet(result, bitSize);
         }
         int shift = 64 - local;
-        System.out.println(shift);
         // 011100
         BinarySet intermediary = new BinarySet(result, result.length << 6);
-        System.out.println(intermediary);
         return intermediary.shiftLeft(shift);
     }
 }

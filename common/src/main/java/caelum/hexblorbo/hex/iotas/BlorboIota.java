@@ -8,6 +8,7 @@ import caelum.hexblorbo.api.utils.BinarySet;
 import caelum.hexblorbo.hex.HexblorboIotas;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
@@ -40,6 +41,10 @@ public class BlorboIota extends Iota {
         this.displayed = displayed;
     }
 
+    public BinarySet getBinarySet() {
+        return binarySet;
+    }
+
     @Override
     public boolean isTruthy(@Nullable CastingEnvironment castingEnvironment) {
         return binarySet.getbitSize() != 0 && binarySet.nextSetBit(0) != -1;
@@ -61,17 +66,7 @@ public class BlorboIota extends Iota {
     }
 
     public static final IotaType<BlorboIota> TYPE = new IotaType<BlorboIota>() {
-        public static final MapCodec<BlorboIota> CODEC = Codec.BYTE_BUFFER.xmap((ByteBuffer byteBuffer) -> {
-            int bitSize = byteBuffer.getInt();
-            return new BlorboIota(new BinarySet(byteBuffer.slice().asLongBuffer().array(), bitSize));
-        }, (BlorboIota blorboIota) -> {
-            BinarySet inQuestion = blorboIota.binarySet;
-            ByteBuffer buffer = ByteBuffer.allocate(4+(8*inQuestion.getWords().length));
-            buffer.putInt(inQuestion.getbitSize());
-            LongBuffer longBuffer = buffer.slice().asLongBuffer();
-            longBuffer.put(inQuestion.getWords());
-            return buffer;
-        }).fieldOf("blobData");
+        public static final MapCodec<BlorboIota> CODEC = BinarySet.CODEC.xmap(BlorboIota::new, BlorboIota::getBinarySet).fieldOf("binarySet");
         // haha client. no data for you!!!! noob!!!!
         public static final StreamCodec<RegistryFriendlyByteBuf, BlorboIota> STREAM_CODEC = ComponentSerialization.STREAM_CODEC.map(BlorboIota::new,
                         (BlorboIota b) -> b.displayed);
